@@ -48,26 +48,8 @@ static inline int mac_sem_getvalue(sem_t *sem, int *value)
 }
 
 
-/*
- * Simulate Linux clock_gettime()
- */
-static inline int clock_gettime(unsigned long int id, struct timespec *ts)
-{
-    clock_serv_t cclock;
-    mach_timespec_t mts;
-    host_get_clock_service(mach_host_self(), CALENDAR_CLOCK, &cclock);
-    clock_get_time(cclock, &mts);
-    mach_port_deallocate(mach_task_self(), cclock);
-    ts->tv_sec = mts.tv_sec;
-    ts->tv_nsec = mts.tv_nsec;
-    return 0;
-}
-
-
-
 /* Other Linux porting wrappers */
 
-typedef unsigned long clockid_t;
 #define CLOCK_REALTIME 0
 
 #define sem_init mac_sem_init
