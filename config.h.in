@@ -1,87 +1,156 @@
-/*
- *  Copyright (C) 2000-2009, Thomas Maier-Komor
- *
- *  This is the source code of mbuffer.
- *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
+/* config.h.in.  Generated from configure.in by autoheader.  */
 
-#ifndef CONFIG_H
-#define CONFIG_H
+/* Define to one of `_getb67', `GETB67', `getb67' for Cray-2 and Cray-YMP
+   systems. This function is required for `alloca.c' support on those systems.
+   */
+#undef CRAY_STACKSEG_END
 
-/* package */
-#undef PACKAGE
+/* Define to 1 if using `alloca.c'. */
+#undef C_ALLOCA
 
-/* version of mbuffer */
-#undef PACKAGE_VERSION
-
-/* Define if you want support for debugging messages. */
+/* Define to 1 to build in debugging mode */
 #undef DEBUG
 
-/* Undefine if you want asserts enabled. */
-#undef NDEBUG
+/* Define to 1 if you have `alloca', as a function or macro. */
+#undef HAVE_ALLOCA
 
-/* md5hashing is enabled by default, 
-   default is libmhash fallback is libmd5 */
-#undef HAVE_LIBMHASH
-#undef HAVE_LIBMD5
-#undef HAVE_LIBCRYPTO
+/* Define to 1 if you have <alloca.h> and it should be used (not on Ultrix).
+   */
+#undef HAVE_ALLOCA_H
 
-/* Define if you have a working `mmap' system call.  */
-#undef HAVE_MMAP
+/* Define to 1 if you have the getaddrinfo() function */
+#undef HAVE_GETADDRINFO
 
-/* Define as the return type of signal handlers (int or void).  */
-#undef RETSIGTYPE
-
-/* Needed for thread safe compilation */
-#undef _REENTRANT
-
-/* Define if you have the hstrerror function.  */
+/* Define to 1 if you have the hstrerror() function */
 #undef HAVE_HSTRERROR
 
-/* Define if you have the getaddrinfo function.  */
-#undef HAVE_GETADDRINFO
+/* Define to 1 if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* Define to 1 if you have the OpenSSL crypto library */
+#undef HAVE_LIBCRYPTO
+
+/* Define to 1 if you have the md5 library */
+#undef HAVE_LIBMD5
+
+/* Define to 1 if you have the mhash library */
+#undef HAVE_LIBMHASH
+
+/* Define to 1 if you have the `pthread' library (-lpthread). */
+#undef HAVE_LIBPTHREAD
+
+/* Define to 1 if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* libsendfile is available */
+#undef HAVE_SENDFILE
+
+/* sendfile in sendfile.h */
+#undef HAVE_SENDFILE_H
+
+/* Define to 1 if you have the seteuid() function */
+#undef HAVE_SETEUID
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define to 1 if `st_blksize' is a member of `struct stat'. */
+#undef HAVE_STRUCT_STAT_ST_BLKSIZE
 
 /* Define to 1 if your `struct stat' has `st_blksize'. Deprecated, use
    `HAVE_STRUCT_STAT_ST_BLKSIZE' instead. */
 #undef HAVE_ST_BLKSIZE
 
-/* Define if `st_blksize' is member of `struct stat'. */
-#undef HAVE_STRUCT_STAT_ST_BLKSIZE
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
 
-/* Define if you have libsendfile. */
-#undef HAVE_SENDFILE
-#undef HAVE_SENDFILE_H
+/* Define to 1 if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
 
-/* seteuid ? */
-#undef HAVE_SETEUID
+/* Define to 1 if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
 
-/* atoll availble? */
-#undef HAVE_ATOLL
+/* Define to 1 if assertions should be disabled. */
+#undef NDEBUG
 
-/* alloca in alloca.h */
-#undef HAVE_ALLOCA_H
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
 
-/* largefile support */
-#undef _LARGE_FILE
-#undef _LARGEFILE_SOURCE
-#undef _LARGEFILE64_SOURCE
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the home page for this package. */
+#undef PACKAGE_URL
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* Define as the return type of signal handlers (`int' or `void'). */
+#undef RETSIGTYPE
+
+/* If using the C implementation of alloca, define if you know the
+   direction of stack growth for your system; otherwise it will be
+   automatically deduced at runtime.
+	STACK_DIRECTION > 0 => grows toward higher addresses
+	STACK_DIRECTION < 0 => grows toward lower addresses
+	STACK_DIRECTION = 0 => direction of growth unknown */
+#undef STACK_DIRECTION
+
+/* Define to 1 if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Enable large inode numbers on Mac OS X 10.5.  */
+#ifndef _DARWIN_USE_64_BIT_INODE
+# define _DARWIN_USE_64_BIT_INODE 1
+#endif
+
+/* Number of bits in a file offset, on hosts where this is settable. */
 #undef _FILE_OFFSET_BITS
 
-#ifndef lint
-#undef restrict
+/* Define for large files, on AIX-style hosts. */
+#undef _LARGE_FILES
+
+/* Needed for thread safe compilation */
+#undef _REENTRANT
+
+/* Define to 1 if you do not have the atoll() function to use atol() instead
+   */
+#undef atoll
+
+/* Define to `__inline__' or `__inline' if that's what the C compiler
+   calls it, or to nothing if 'inline' is not supported under any name.  */
+#ifndef __cplusplus
 #undef inline
 #endif
 
+/* Define to the equivalent of the C99 'restrict' keyword, or to
+   nothing if this is not supported.  Do not define if restrict is
+   supported directly.  */
+#undef restrict
+/* Work around a bug in Sun C++: it does not support _Restrict or
+   __restrict__, even though the corresponding Sun C compiler ends up with
+   "#define restrict _Restrict" or "#define restrict __restrict__" in the
+   previous line.  Perhaps some future version of Sun C++ will work with
+   restrict; if so, hopefully it defines __RESTRICT like Sun C does.  */
+#if defined __SUNPRO_CC && !defined __RESTRICT
+# define _Restrict
+# define __restrict__
 #endif
+
+/* Define to `unsigned int' if <sys/types.h> does not define. */
+#undef size_t
